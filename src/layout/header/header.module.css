@@ -1,3 +1,57 @@
 .root{
-    color: #fff;
+    color: #5f27ee;
+}
+.header{
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-areas:'logo nav';
+    background-color: #06b580;
+}
+.logo{
+    grid-area: 'logo';
+    height: 50px;
+    width: 50px;
+    display: grid;
+}
+.nav{
+    grid-area: 'nav';
+    display: grid;
+    grid-template-columns:repeat(3,auto);
+    align-items: center;
+    grid-column-gap: 20px;
+    justify-self: right;
+}
+.menuContainer{
+    display: none;
+
+}
+.menu{
+    height: 50px;
+    width: 50px;
+}
+@media (max-width: 768px){
+    .header{
+        display: grid;
+        grid-template-areas:'logo menuContainer';
+
+    }
+    .menuContainer{
+        grid-area: 'menuContainer';
+        display: block;
+        justify-self: right;
+        width: 100px;
+    }
+    .nav{
+        grid-template-rows:repeat(3,auto);
+        grid-template-columns: none;
+        grid-row-gap: 20px;
+        justify-content: right;
+        grid-column-gap: none;
+    }
+    .menu{
+        height: 50px;
+        width: 50px;
+    }
+    
 }
