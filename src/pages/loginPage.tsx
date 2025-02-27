@@ -4,7 +4,7 @@ import styles from './loginPage.module.css'
 const LoginPage = () => {
   return (
     <div >
-      Hello There
+      Hello There --- Login
       <div>
         <label>Login ID</label>
         <input type="text" placeholder="Username" />
